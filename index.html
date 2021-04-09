@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background-color: #000;
+        }
+        
+        .text {
+            position: relative;
+            width: 100%;
+            height: 800px;
+            overflow: hidden;
+        }
+        
+        h1 {
+            font-size: 30pt;
+            font-weight: bold;
+            font-style: italic;
+            color: white;
+            margin-top: 280px;
+            text-align: center;
+            color: #d1e0f7;
+        }
+        
+        .text::before {
+            content: '';
+            width: 1100px;
+            height: 800px;
+            background-color: #000;
+            position: absolute;
+            animation: animate 9s linear normal;
+        }
+        
+        @keyframes animate {
+            0% {
+                transform: translateX(-700px);
+            }
+            100% {
+                transform: translateX(0px);
+            }
+        }
+        
+        video {
+            position: absolute;
+            top: -50px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            pointer-events: none;
+            mix-blend-mode: screen;
+            animation: animate 12s linear normal;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="text">
+        <video src="Thin_Smoke_86___4K_res.mp4" muted="" autoplay=""></video>
+        <h1>
+            This text will disappear from left
+        </h1>
+    </div>
+</body>
+
+</html>
